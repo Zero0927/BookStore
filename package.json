@@ -1,7 +1,7 @@
 {
-    "title": "Landing Page",
-    "name": "startbootstrap-landing-page",
-    "version": "6.0.2",
+    "title": "Shop Homepage",
+    "name": "startbootstrap-shop-homepage",
+    "version": "5.0.2",
     "scripts": {
         "build": "npm run clean && npm run build:pug && npm run build:scss && npm run build:scripts && npm run build:assets",
         "build:assets": "node scripts/build-assets.js",
@@ -12,7 +12,7 @@
         "start": "npm run build && node scripts/start.js",
         "start:debug": "npm run build && node scripts/start-debug.js"
     },
-    "description": "An HTML landing page template built with Bootstrap",
+    "description": "A shop homepage HTML template built with Bootstrap",
     "keywords": [
         "css",
         "sass",
@@ -21,9 +21,9 @@
         "theme",
         "template"
     ],
-    "homepage": "https://startbootstrap.com/theme/landing-page",
+    "homepage": "https://startbootstrap.com/template/shop-homepage",
     "bugs": {
-        "url": "https://github.com/StartBootstrap/startbootstrap-landing-page/issues",
+        "url": "https://github.com/StartBootstrap/startbootstrap-shop-homepage/issues",
         "email": "feedback@startbootstrap.com"
     },
     "license": "MIT",
@@ -33,7 +33,7 @@
     ],
     "repository": {
         "type": "git",
-        "url": "https://github.com/StartBootstrap/startbootstrap-landing-page.git"
+        "url": "https://github.com/StartBootstrap/startbootstrap-shop-homepage.git"
     },
     "dependencies": {
         "bootstrap": "5.0.2"

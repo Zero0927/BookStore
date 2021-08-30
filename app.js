@@ -4,9 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
-var catalogRouter = require('./routes/catalog');  //Import routes for "catalog" area of site
+var indexRouter = require('./app_server/routes/index');
+var usersRouter = require('./app_server/routes/users');
+var catalogRouter = require('./app_server/routes/catalog');  //Import routes for "catalog" area of site
 
 var compression = require('compression');
 var helmet = require('helmet');
@@ -16,7 +16,8 @@ var app = express();
 
 // Set up mongoose connection
 var mongoose = require('mongoose');
-var dev_db_url = 'mongodb+srv://cooluser:coolpassword@cluster0.a9azn.mongodb.net/local_library?retryWrites=true';
+// var dev_db_url = 'mongodb+srv://cooluser:coolpassword@cluster0.a9azn.mongodb.net/local_library?retryWrites=true';
+var dev_db_url = 'mongodb://localhost/BookStore';
 var mongoDB = process.env.MONGODB_URI || dev_db_url;
 mongoose.connect(mongoDB, {useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.Promise = global.Promise;
@@ -25,7 +26,7 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+app.set('views', path.join(__dirname, 'app_server/views'));
 app.set('view engine', 'pug');
 
 app.use(logger('dev'));
